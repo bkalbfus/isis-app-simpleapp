@@ -16,7 +16,7 @@ import org.apache.isis.applib.annotation.Publishing;
 import org.apache.isis.applib.services.message.MessageService;
 import org.apache.isis.applib.services.repository.RepositoryService;
 import org.apache.isis.applib.services.title.TitleService;
-import org.apache.isis.applib.jaxbadapters.PersistentEntityAdapter;
+import org.apache.isis.applib.jaxb.PersistentEntityAdapter;
 
 import static org.apache.isis.applib.annotation.SemanticsOf.IDEMPOTENT;
 import static org.apache.isis.applib.annotation.SemanticsOf.NON_IDEMPOTENT_ARE_YOU_SURE;
@@ -36,6 +36,7 @@ import lombok.val;
 @javax.jdo.annotations.Unique(name="SimpleObject_name_UNQ", members = {"name"})
 @DomainObject()
 @DomainObjectLayout()
+
 @XmlJavaTypeAdapter(PersistentEntityAdapter.class)
 @ToString(onlyExplicitlyIncluded = true)
 public class SimpleObject implements Comparable<SimpleObject> {
