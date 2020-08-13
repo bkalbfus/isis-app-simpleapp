@@ -28,7 +28,7 @@ import lombok.extern.log4j.Log4j2;
 public class NewUserService {
     private final FixtureScripts fixtureScripts;
     
-    @Inject  SecurityModuleConfig  securityModuleConfig;
+//    @Inject  SecurityModuleConfig  securityModuleConfig;
 
     @Inject
     public NewUserService(final FixtureScripts fixtureScripts) {
@@ -43,7 +43,10 @@ public class NewUserService {
             log.info("seeding delegate user");
 
             List<String> rolesList = new ArrayList<String>();
-            rolesList.add(securityModuleConfig.getRegularUserRoleName());
+            // Workaround for securityModuleConfig not being available in BDD tests
+            final String regularUserRoleName = "isis-module-security-regular-user";
+//            final String regularUserRoleName = securityModuleConfig.getRegularUserRoleName();
+            rolesList.add(regularUserRoleName);
 			fixtureScripts.run(new SeedDelegateUserFixtureScript(event,
 				rolesList)
 				);
