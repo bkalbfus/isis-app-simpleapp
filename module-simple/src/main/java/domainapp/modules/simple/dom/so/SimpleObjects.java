@@ -5,8 +5,17 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.jdo.JDOQLTypedQuery;
 
-import org.apache.isis.applib.annotation.*;
+import org.apache.isis.applib.annotation.Action;
+import org.apache.isis.applib.annotation.ActionLayout;
+import org.apache.isis.applib.annotation.BookmarkPolicy;
+import org.apache.isis.applib.annotation.DomainService;
+import org.apache.isis.applib.annotation.NatureOfService;
+import org.apache.isis.applib.annotation.Programmatic;
+import org.apache.isis.applib.annotation.PromptStyle;
+import org.apache.isis.applib.annotation.SemanticsOf;
 import org.apache.isis.applib.services.repository.RepositoryService;
+import org.apache.isis.extensions.secman.api.user.ApplicationUser;
+import org.apache.isis.extensions.secman.api.user.ApplicationUserRepository;
 import org.apache.isis.persistence.jdo.applib.services.IsisJdoSupport_v3_2;
 
 import domainapp.modules.simple.SimpleModule;
@@ -74,5 +83,5 @@ public class SimpleObjects {
         q.executeList();
     }
 
-
+// @Inject private ApplicationUserRepository<? extends ApplicationUser> applicationUserRepository;
 }

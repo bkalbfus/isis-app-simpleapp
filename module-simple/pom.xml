@@ -65,6 +65,24 @@
             <artifactId>isis-testing-fixtures-applib</artifactId>
         </dependency>
 
+		<!--  Secman -->
+		<dependency>
+			<groupId>org.apache.isis.extensions</groupId>
+			<artifactId>isis-extensions-secman-model</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.isis.extensions</groupId>
+			<artifactId>isis-extensions-secman-encryption-jbcrypt</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.isis.extensions</groupId>
+			<artifactId>isis-extensions-secman-persistence-jdo</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.isis.extensions</groupId>
+			<artifactId>isis-extensions-secman-shiro-realm</artifactId>
+		</dependency>
+
         <!-- TESTS -->
         <dependency>
             <groupId>org.apache.isis.mavendeps</groupId>
