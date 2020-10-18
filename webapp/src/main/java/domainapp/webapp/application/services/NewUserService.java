@@ -7,8 +7,6 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.apache.isis.applib.annotation.OrderPrecedence;
-import org.apache.isis.core.commons.internal.exceptions._Exceptions;
-import org.apache.isis.extensions.secman.api.SecurityModuleConfig;
 import org.apache.isis.extensions.secman.api.events.UserCreatedEvent;
 import org.apache.isis.testing.fixtures.applib.fixturescripts.FixtureScripts;
 import org.springframework.beans.factory.annotation.Qualifier;

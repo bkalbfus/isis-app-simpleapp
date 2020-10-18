@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import org.apache.isis.core.commons.internal.exceptions._Exceptions;
+import org.apache.isis.commons.internal.exceptions._Exceptions;
 import org.apache.isis.extensions.secman.api.user.ApplicationUser;
 import org.apache.isis.extensions.secman.jdo.dom.role.ApplicationRole;
 import org.apache.isis.extensions.secman.jdo.dom.role.ApplicationRoleRepository;
